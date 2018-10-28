@@ -1,4 +1,4 @@
 function sumOfOther(arr) {
-  let sum = arr.reduce((a, b) => a + b);
-  return arr.map((val, i) => sum - val);
+  let sum = arr.reduce((acc, val) => acc + val);
+  return arr.map((val) => sum - val);
 }
