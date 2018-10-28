@@ -1,9 +1,9 @@
 const assert = require('assert');
 Object.freeze(assert);
 
-const { sumOfOtherumOfOther } = require('.sumOfOther');
-const { make } = require('.make');
-const { recursion } = require('.recursion');
+const { sumOfOther } = require('./sumOfOther');
+const { make } = require('./make');
+const { rebTree } = require('./recursion');
 
 
 describe('SumOfOther', () => {
@@ -37,7 +37,7 @@ describe('recursion', () => {
   it('1', () => {
     const tree = { "value": 100, "left": { "value": 90, "left": { "value": 70 }, "right": { "value": 99 } }, "right": { "value": 120, "left": { "value": 110 }, "right": { "value": 130 } } };
 
-    let array = recursion(tree);
+    let array = rebTree(tree);
     assert.deepEqual(array, [[100], [90, 120], [70, 99, 110, 130]]);
   });
 

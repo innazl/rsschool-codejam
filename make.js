@@ -1,4 +1,4 @@
-function make(...args) {
+module.exports.make = function make(...args) {
   const argPrev = args.length - 1;
   if (args[argPrev] instanceof Function) {
       const reducFunc = args[argPrev];
